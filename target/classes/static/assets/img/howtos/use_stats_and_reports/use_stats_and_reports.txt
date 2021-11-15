@@ -1,0 +1,6 @@
+2.How to use WL-OPC stats & reports page, total alert notification pie chart and generate report configurations?
+
+1.Go to "Stats and Reports" page
+2.Click "Total Alert Notifications" chart
+3.Click pie chart to see notification detail
+4.Go to "Generate Report" tab, select "Time Precision", "Domain", "Notification Type" and "Select Report Range" from "Get Report" panel then click "Generate Report"

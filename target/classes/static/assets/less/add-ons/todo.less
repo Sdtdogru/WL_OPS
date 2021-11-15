@@ -1,0 +1,96 @@
+/* ToDo List
+=================================================================== */
+.todo-list {
+	border-top:1px solid @border;
+	
+	ul {
+		margin: 0;
+		padding: 0 10px;
+		list-style: none;
+		min-height: 40px;
+		
+		&:empty {
+			padding: 0 !important;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			
+			&:before {
+				content: "You're awesome! Everything is done";
+			}
+		}
+		
+		li {
+			position: relative;
+			line-height: 40px;
+			border-bottom: 1px solid @main;
+			overflow: hidden;
+			padding: 0 15px 0 55px;
+			background: white;
+			
+			&:before, &:after {
+				position: absolute;
+				content: '';
+				height: 25px;
+				width: 3px;
+				border-left: 1px dotted @border;
+				border-right: 1px dotted @border;
+				top: 10px;
+			}
+			
+			&:before {
+				left: 8px;
+			}
+			
+			&:after {
+				left: 10px;
+			}
+			
+			&:last-child {
+				border-bottom: none;
+			}
+			
+			.desc {
+				display: inline-block;
+				margin-top: 3px;
+			}
+			
+			.custom-checkbox-item {
+				position: absolute;
+				top: 1px;
+				left: 24px;
+			}
+		}
+		
+		&.completed {
+			color: @border;
+			border-bottom:1px solid @border;
+			min-height: 0px !important;
+			
+			&:empty {
+				border-bottom:1px solid @border;
+				height: 0px !important;
+				
+				&:before {
+					display: none;
+				}
+			}
+			
+			li {
+				
+				&:first-child {
+					border-top: 3px double @main;
+				}
+				
+				span {
+					text-decoration: line-through;
+				}
+				
+			}
+		}
+		
+		&:empty {
+			padding: 5px;
+		}
+	} 
+}

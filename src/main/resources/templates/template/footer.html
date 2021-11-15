@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <body>
+
+
+        <div th:remove="${!session.userLoginData.LOCAL_USER ? 'all' : 'none'}"
+             th:unless="${session == null || session.userLoginData == null}"
+             class="modal modal-primary fade" id="modal-edit-password"
+             tabindex="-1" role="dialog"
+             aria-labelledby="modal-edit-password-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="modal-edit-password-label">Change
+                            Password</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form id="change-user-password-glb-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Old Password</span> <input
+                                        required type="password" id="glb-old-password"
+                                        name="old-password" class="form-control" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">New Password</span> <input
+                                        required type="password" id="glb-new-password"
+                                        name="new-password" class="form-control" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Confirm</span> <input required
+                                                                                          type="password" id="glb-confirm-password"
+                                                                                          name="confirm-password" class="form-control" value="" />
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>				
+                        <button type="button"
+                                class="btn btn-sm btn-primary change-user-password-glb">
+                            <i class="fa fa-save"></i> Change Password
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer style="display: none">
+            <div class="row">
+                <div class="col-sm-12">
+                    &copy; WL-OPC | WLSDM OPERATION CENTER [[${data.WL_OPC_VERSION}]] <a href="http://wlsdm.com">
+                        wlsdm.com</a>
+                </div>
+            </div>
+
+        </footer>
+        <!--/.row-->
+
+        <!-- start: JavaScript-->
+        <!--[if !IE]>-->
+
+        <script th:src="@{/assets/js/jquery-2.1.1.min.js}"></script>
+
+        <!--<![endif]-->
+
+        <!--[if IE]>
+
+                        <script th:src="@{/assets/js/jquery-1.11.1.min.js}"></script>
+
+                <![endif]-->
+
+        <!--[if !IE]>-->
+
+        <script type="text/javascript">
+            window.jQuery
+                    || document
+                    .write("<script th:src='@{/assets/js/jquery-2.1.1.min.js}'>"
+                            + "<" + "/script>");
+        </script>
+
+        <!--<![endif]-->
+
+        <!--[if IE]>
+
+                        <script type="text/javascript">
+                        window.jQuery || document.write("<script th:src='@{/assets/js/jquery-1.11.1.min.js}'>"+"<"+"/script>");
+                        </script>
+
+                <![endif]-->
+
+        <link th:href="@{/assets/css/app.css}" rel="stylesheet">
+
+        <script th:src="@{/assets/js/jquery-migrate-1.2.1.min.js}"></script>
+        <script th:src="@{/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/js/bootstrap.min.js}"></script>
+
+        <script th:src="@{/assets/plugins/sparkline/jquery.sparkline.min.js}"></script>
+        <script th:src="@{/assets/js/jquery.mmenu.min.js}"></script>
+        <script th:src="@{/assets/js/uncompressed/core.js}"></script>
+        <script th:src="@{/assets/plugins/moment/moment.min.js}"></script>
+        <script th:src="@{/assets/plugins/moment/moment-timezone.js}"></script>
+        
+        <script th:src="@{/assets/plugins/confirm/bootstrap-confirmation.js}"></script>
+        <script th:src="@{/assets/plugins/jquery-cookie/jquery.cookie.min.js}"></script>
+       
+        <script th:src="@{/assets/plugins/bootstraptable/bootstrap-table.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/editable/js/bootstrap-editable.js}" type="text/javascript"></script>
+
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/export/bootstrap-table-export.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/export/tableExport.js}" type="text/javascript"></script>
+
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/editable/bootstrap-table-editable.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/resizable/colResizable-1.5.source.js}" type="text/javascript"></script>
+
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/resizable/bootstrap-table-resizable.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/reorder-columns/jquery.dragtable.js}" type="text/javascript"></script>
+
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/reorder-columns/bootstrap-table-reorder-columns.js}" type="text/javascript"></script> 
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/filter/bootstrap-table-filter.js}" type="text/javascript"></script>
+        
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/filter-control/bootstrap-table-filter-control.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/sticky-header/bootstrap-table-sticky-header.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/cookie/bootstrap-table-cookie.js}" type="text/javascript"></script>
+        <script th:src="@{/assets/plugins/bootstraptable/extensions/multiple-sort/bootstrap-table-multiple-sort.js}" type="text/javascript"></script>
+        
+        <script th:src="@{/assets/js/pages/app.js}"></script>
+
+        <!-- end: JavaScript-->
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+/* .social-box
+=================================================================== */
+
+.social-box {
+	min-height: 160px;
+	background: white;
+	margin-bottom: 30px;
+	text-align: center;
+		
+	i {
+		display: block;
+		font-size: 40px;
+		line-height: 90px;
+		background: @heading;
+	}
+	
+	ul {
+		list-style: none;
+		padding: 10px 0;
+		
+		li {
+			display: block;
+			width: 50%;
+			float: left;
+			
+			&:first-child {
+				border-right: 1px solid @main;
+			}
+			
+			strong {
+				display: block;
+				font-size: 20px;
+			}
+			
+			span {
+				color: @border;
+				font-weight: 500;
+				text-transform: uppercase;
+				font-size: 10px;
+			}
+		}
+	}
+	
+	&.facebook {
+		i {
+			background: @facebook;
+			color: white;
+		}
+	}
+	
+	&.twitter {
+		i {
+			background: @twitter;
+			color: white;
+		}
+	}
+	
+	&.linkedin {
+		i {
+			background: @linkedin;
+			color: white;
+		}
+	}
+	
+	&.google-plus {
+		i {
+			background: @google-plus;
+			color: white;
+		}
+	}
+}

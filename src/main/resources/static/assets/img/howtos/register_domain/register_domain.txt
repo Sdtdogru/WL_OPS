@@ -1,0 +1,11 @@
+1.How to register WebLogic domain to WL-OPC and check registiration on WLSDM settigs page.
+
+1.Login to WL-OPC Console
+
+2.If there is no registered WebLogic domain; console will redirects to the "Administration > WL Domains" 
+
+3.Open "REGISTER WEBLOGIC DOAMIN" panel
+
+4.Enter WebLogic AdminServer's Hostname/IP , Port and Credentials (Make sure WL-OPC able to network access to the AdminServer IP:PORT)
+
+5. View registration details on "WLSDM Console > System Settings (wl-opc.system tab)" page 

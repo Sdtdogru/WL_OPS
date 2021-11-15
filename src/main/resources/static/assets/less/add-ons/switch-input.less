@@ -1,0 +1,145 @@
+/*
+ * Copyright (c) 2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+.switch {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	width: 56px;
+  	height: 20px;
+  	background-color: transparent;
+  	cursor: pointer;
+	.box-sizing(content-box);
+	overflow: hidden;
+}
+
+.switch-input {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	opacity: 0;
+}
+
+.switch-label {
+	border: 1px solid @border;
+	.border-radius(2px);
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: white;
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+.switch-label:before, 
+.switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: @border;
+}
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+  background: @heading;
+}
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: white;
+	border: 1px solid @border;
+  .border-radius(1px);
+  background: white;
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.switch-input:checked ~ .switch-handle {
+  left: 38px;
+}
+
+.switch-default > .switch-input:checked ~ .switch-label {
+	background: @border;
+}
+
+.switch-primary > .switch-input:checked ~ .switch-label {
+  	background: @primary;
+	border-color: darken(@primary,10%);
+}
+
+.switch-primary > .switch-input:checked ~ .switch-handle {
+	border-color: darken(@primary,10%);
+}
+
+.switch-success > .switch-input:checked ~ .switch-label {
+  	background: @success;
+	border-color: darken(@success,10%);
+}
+
+.switch-success > .switch-input:checked ~ .switch-handle {
+	border-color: darken(@success,10%);
+}
+
+.switch-warning > .switch-input:checked ~ .switch-label {
+  	background: @warning;
+	border-color: darken(@warning,10%);
+}
+
+.switch-warning > .switch-input:checked ~ .switch-handle {
+	border-color: darken(@warning,10%);
+}
+
+.switch-info > .switch-input:checked ~ .switch-label {
+  	background: @info;
+	border-color: darken(@info,10%);
+}
+
+.switch-info > .switch-input:checked ~ .switch-handle {
+	border-color: darken(@info,10%);
+}
+
+.switch-danger > .switch-input:checked ~ .switch-label {
+  	background: @danger;
+	border-color: darken(@danger,10%);
+}
+
+.switch-danger > .switch-input:checked ~ .switch-handle {
+	border-color: darken(@danger,10%);
+}

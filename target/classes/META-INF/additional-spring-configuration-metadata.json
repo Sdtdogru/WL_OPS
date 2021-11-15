@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "info.app.version",
+    "type": "java.lang.String",
+    "description": "Application version"
+  },
+  {
+    "name": "info.app.build.date",
+    "type": "java.lang.String",
+    "description": "Application build date"
+  },
+  {
+    "name": "info.app.build.number",
+    "type": "java.lang.String",
+    "description": "Application build number"
+  },
+  {
+    "name": "server.http.port",
+    "type": "java.lang.String",
+    "description": ""
+  },
+  {
+    "name": "server.http.enabled",
+    "type": "java.lang.Boolean",
+    "description": ""
+  },
+  {
+    "name": "server.http.oninvitation",
+    "type": "java.lang.Boolean",
+    "description": "A description for 'server.http.oninvitation'"
+  }
+]}

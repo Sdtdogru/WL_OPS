@@ -1,0 +1,140 @@
+/* UI - Sliders
+=================================================================== */
+
+.slider {
+	background: @main;
+	border: none;
+	position: relative;
+	z-index: 10;
+	margin: 5px 0px !important;
+	.border-radius(2px);
+	
+	.ui-slider-range {
+		.box-sizing(content-box);
+		background: @primary;
+		.box-shadow(inset 0 -1px 0 rgba(0, 0, 0, .15));
+		.border-radius(2px);
+	}
+	
+	.ui-slider-handle {
+		.border-radius(2px);
+		background: white;
+		.box-shadow(0 1px 1px rgba(0,0,0,.15));
+		border: 1px solid @border;
+	}
+	
+	
+	&.slider-success {
+		
+		.ui-slider-range {
+			background: @success;
+		}
+
+	}
+	
+	&.slider-info {
+		
+		.ui-slider-range {
+			background: @info;
+		}
+		
+	}
+	
+	&.slider-warning {
+		
+		.ui-slider-range {
+			background: @warning;
+		}
+
+	}
+	
+	&.slider-danger {
+		
+		.ui-slider-range {
+			background: @danger;
+		}
+
+	}
+	
+	&.slim {
+		height: 6px;
+		
+		.ui-slider-handle {
+			margin-top: -1px;
+			height: 14px;
+			width: 14px;			
+		}
+	}
+		
+	&.vertical {
+		float: left;
+	    height: 100px;
+	    margin: 10px 20px !important;
+	
+		.ui-slider-handle {
+			margin-left: -3px;
+		}
+		
+		&.slim {
+			width: 6px;
+			
+			.ui-slider-handle {
+				margin-left: -4px;
+			}
+		}
+	}
+}
+
+/* UI - Progress Bars
+=================================================================== */
+
+.progressbar {
+	background: @main;
+	color: @border;
+	border: none;
+	height: 12px;
+	position: relative;
+	.border-radius(2px);
+	
+	.ui-progressbar-value {
+		background: @primary;
+		border: none;
+		height: 100%;
+		top: 1px;
+		position: absolute;
+		left: 1px;
+		.border-radius(1px);
+	}
+	
+	&.progress-success {
+		
+		.ui-progressbar-value {
+			background: @success;
+		}
+	}
+	
+	&.progress-info {
+		
+		.ui-progressbar-value {
+			background: @info;
+		}
+	}
+	
+	&.progress-warning {
+		
+		.ui-progressbar-value {
+			background: @warning;
+		}
+	}
+	
+	&.progress-danger {
+		
+		.ui-progressbar-value {
+			background: @danger;
+		}
+	}
+	
+	&.slim {
+		height: 6px;
+	}	
+}

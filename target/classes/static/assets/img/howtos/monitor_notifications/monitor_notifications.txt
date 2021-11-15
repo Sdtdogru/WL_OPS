@@ -1,0 +1,4 @@
+3.How to monitor Core Module Notifications, FMW Module Notifications and Daily Performance Reports notifications?
+
+1. Login to WL-OPC console. Go to "Notifications > Dashboard (All)" page
+2. Select notification type then view all kind of notifications in one dashboard

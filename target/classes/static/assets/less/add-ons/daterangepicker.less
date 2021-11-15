@@ -1,0 +1,51 @@
+.daterangepicker .ranges .input-mini {
+  	background-color: @heading;
+  	border: 1px solid @border;
+  	border-radius: 0px;
+  	color: @mainText;
+}
+
+.daterangepicker .ranges ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.daterangepicker .ranges li {
+  	background: @heading;
+  	border: 1px solid @border;
+  	color: @mainText;
+  	.border-radius;
+	padding: 4px 10px;
+	margin-bottom: 9px;
+}
+
+.daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
+  	background: @primary;
+  	border: 1px solid @primary;
+}
+
+.daterangepicker .calendar-date {
+  	border: 1px solid @border;
+  	.border-radius;
+	margin-top: -1px;
+}
+
+.daterangepicker {
+	padding: 5px 4px 4px 4px;
+  	.border-radius;
+	border: 1px solid @border;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+  	background: @heading;
+}
+
+.daterangepicker td.in-range {
+  	background: lighten(@primary,45%);
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  	background-color: @primary;
+  	border-color: @primary;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      lang="en">
+
+<head>
+
+    <link th:href="@{/assets/plugins/select2/css/select2.css}"
+          rel="stylesheet">
+
+    <object th:include="template/header :: head" th:remove="tag" />
+
+    <link
+            th:href="@{/assets/plugins/datatables/css/dataTables.bootstrap.css}"
+            rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body th:attr="class=${data.SIDE_BAR_STATE}">
+
+<!-- start: Content -->
+<div class="main">
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <table id="example" class="display" width="100%"></table>
+        </div>
+    </div>
+
+</div>
+
+
+<object th:include="template/footer :: body" th:remove="tag" />
+
+
+<script th:src="@{/assets/plugins/datatables/datatables.min.js}"></script>
+<script th:src="@{/assets/js/pages/roles.js}"></script>
+
+</body>
+</html>

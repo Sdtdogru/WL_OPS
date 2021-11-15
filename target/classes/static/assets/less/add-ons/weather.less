@@ -1,0 +1,47 @@
+.weather {
+	
+	&.widget {
+		
+		.today {
+			margin: -15px -15px 1px -15px;
+			background: @primary;
+			padding-bottom: 20px;
+			color: white;
+			
+			i.climacon { 
+				font-size: 198px !important;
+				margin: 0;
+				padding: 0;
+				
+			}
+	
+		}
+		
+		ul.forecast {
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			margin: 0 ;
+			padding: 0;
+			text-align: center;
+			padding-top: 15px;
+			
+			li {
+				display: table-cell;
+			}
+
+			
+			i {
+				display: block;
+				width: 100%;
+				color: @border;
+				font-size: 38px;
+			}
+			
+			.label {
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+		}
+	} 
+}

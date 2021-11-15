@@ -1,0 +1,144 @@
+/* Activity
+=================================================================== */
+.activity {
+	position: relative;
+	
+	&:before {
+		position: absolute;
+		content:'';
+		width: 0;
+		height: 100%;
+		border-right: 2px solid @border;
+		left: 34px;
+	} 
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			position: relative;
+			background: white;
+			margin: 0 0 30px 66px;
+			padding: 10px;
+			
+			&:before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				top: 9px;
+				left: -20px;
+				position: absolute;
+				border-right: 10px solid @heading;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			
+			&:after {
+				content: '';
+				width: 20px;
+				height: 20px;
+				top: 9px;
+				left: -19px;
+				position: absolute;
+				border-right: 10px solid @heading;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			
+			.header {
+				background: @heading;
+				margin: -10px -10px -10px -10px;
+				padding: 0 10px;
+				line-height: 40px;
+				
+				.label {
+					margin-right: 15px;
+				}
+				
+				.location, .time {
+					float: right;
+					margin-left: 20px;
+					font-size: 12px;
+					opacity: .5;
+				}
+			}
+			
+			.description {
+				margin: 20px 0 0 0;
+				
+				blockquote {
+					margin: 0;
+				}
+			}
+
+			.author {
+				position: absolute;
+				z-index:1;
+				width: 60px;
+				float: left;
+				top: 0px;
+				left: -70px;
+				
+				img {
+					height: 56px;
+					.border-radius(50em);
+					border: 8px solid @main;
+					margin-left: -4px;
+					margin-top: -8px;
+				}
+			}	
+		}	
+	}	
+}
+
+@media (max-width: 767px) {
+	
+	.activity {
+
+		ul {
+
+			li {
+
+				.header {
+
+					.location, .time {
+						position: absolute;
+						bottom: -36px;
+						right: 5px;
+					}
+					
+					.time {
+						right: 120px;
+					}
+				}
+
+				.description {
+					margin: 20px 0 0 0;
+
+					blockquote {
+						margin: 0;
+					}
+				}
+
+				.author {
+					position: absolute;
+					z-index:1;
+					width: 60px;
+					float: left;
+					top: 0px;
+					left: -70px;
+
+					img {
+						height: 56px;
+						.border-radius(50em);
+						border: 8px solid @main;
+						margin-left: -4px;
+						margin-top: -8px;
+					}
+				}
+			}	
+		}	
+	}
+}

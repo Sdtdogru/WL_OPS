@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Nov 15 22:36:06 TRT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017d-2519-7b62-000006102590 
+on database directory C:\Users\EXT02D36560\Downloads\WL-OPC\WLOPC\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 
+Loaded from file:/C:/Users/EXT02D36560/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=11.0.12+7-LTS
+user.dir=C:\Users\EXT02D36560\Downloads\WL-OPC
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

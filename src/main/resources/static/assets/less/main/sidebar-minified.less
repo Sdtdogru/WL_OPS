@@ -1,0 +1,142 @@
+body.sidebar-minified {
+
+	.main {
+		width: 100%;
+		padding-left: 80px;
+	}
+	
+	footer {
+		padding: 0 20px 40px 80px;
+	}
+	
+	#usage {
+		padding: 0 0 0 60px;
+	}
+		
+	.sidebar {
+		width: 50px;
+		overflow: visible;
+		
+		.sidebar-header {
+			padding: 5px;
+			height: 50px;
+			
+			img {
+				width: 40px;
+			}
+
+			h2, h3 {
+				display: none;
+			}
+			
+			.user-menu {
+				#sidebar-minify {
+					position: fixed;
+					bottom: 0 !important;
+					left: 0;
+					display: visible;
+					width: 60px;
+					text-align: center;
+				}
+			}
+		}
+		
+		.sidebar-menu {
+			overflow: visible;
+			width: auto;
+		}
+		
+		ul.nav.nav-sidebar {
+			width: auto;
+			
+			> li {
+				position: relative;
+				
+				> a {
+					width: 50px;
+					position: relative;
+					padding: 0 0 0 5px;
+					line-height: 40px;
+					text-align: center;
+					
+					.indicator {
+						display: none;
+					}
+					
+					&.open {
+						cursor: default;
+					}
+										
+					.text {
+						position: absolute;
+						z-index: 1000;
+						background: lighten(@sidebar,5%);
+						min-height: 40px;
+						width: 200px;
+						padding-left: 15px;
+						top: 0px;
+						left: 60px;
+						display: none !important;
+						text-align: left;
+					}
+					 
+				}
+				
+				> ul {
+					display: none !important;					
+				}
+				
+				&:hover {
+					
+					> a {
+						position: relative;
+						cursor: pointer;
+
+						.text {
+							width: 200px;
+							display: block !important;
+							margin-top: -1px;
+							margin-left: -23px;
+							border-left: 0;
+							height: 42px;
+						}
+
+					}
+					
+					> ul {
+						display: block !important;
+						position: absolute;
+						top: 41px;
+						left: 38px;
+						z-index: 999;
+						width: 200px;
+						border-top: 0;
+						background: @sidebar;
+						padding: 0;
+						margin: 0;
+						.box-shadow(1px 2px 4px rgba(0,0,0,.25));
+						
+						> li {
+							padding: 0;
+							margin: 0;
+							
+							&:hover {
+								//background: darken(@sidebar, 5%);
+							}
+							
+							> a {
+								display: block;
+								width: 100%;
+								line-height: 40px;
+							}							
+						}						
+					}					
+				}	
+			}		
+		}
+		
+		.sidebar-footer { 
+			display: none;
+		}
+	}	
+}

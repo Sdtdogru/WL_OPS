@@ -1,0 +1,88 @@
+/* Tabs
+=================================================================== */
+.panel-heading {
+	
+	.nav-tabs {
+		float: right;
+		border: none;
+		
+		li {
+			border: none;
+			.border-radius;
+			
+			a {
+				background: transparent;
+				border: none;
+				.border-radius;
+				margin: 0;
+				font-size: 14px; 
+				line-height: 20px; 
+				height: 40px;
+				color: @mainText;
+				
+			}
+			
+			&.active > a {
+				background: white;
+				border: none;
+			}
+			
+			&:hover {
+				border: none;
+			}
+			
+			&:last-child {
+			}
+		}	
+	}
+}
+
+.panel-body {
+	
+	.nav-tabs {
+		position: relative;
+		border: none;
+		height: 40px;
+		z-index: 2;
+		
+		li {
+			float: right;
+			border: none;
+			.border-radius;
+			
+			a {
+				background: transparent;
+				border: none;
+				.border-radius;
+				margin: 0;
+				font-size: 14px; 
+				line-height: 20px; 
+				height: 40px;
+				color: @border;
+				
+			}
+			
+			&.active > a {
+				background: white;
+				border: none;
+				color: @mainText;
+			}
+			
+			&:hover {
+				border: none;
+			}
+		}	
+	}
+	
+	.tab-content {
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin: 0;
+		
+		.tab-pane {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
