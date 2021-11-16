@@ -23,13 +23,49 @@
 
 <!-- start: Content -->
 <div class="main">
-
+    <div>
+        <form action="roles.html" method="post" id="roleForm">
+            <label>User Name:</label>
+            <input style="height: 27px;" type="text" name="username" id="name">
+            <select style="width:100px; height: 27px;" name="role" id="role">
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+            </select>
+            <button type="button" id="submitBtn">Save</button>
+        </form>
+    </div>
+    </br>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <table id="example" class="display" width="100%"></table>
         </div>
     </div>
-
+    <div class="bs-example">
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <label name="updateid" id="updateid" ></label>
+                        <input style="height: 27px;" type="text" name="updatename" id="updatename">
+                        <select style="width:100px; height: 27px;" name="updaterole" id="updaterole">
+                            <option value="admin">admin</option>
+                            <option value="user">user</option>
+                        </select>
+                        <input type="hidden" name="updateid1" id="updateid1">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="modalSave">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

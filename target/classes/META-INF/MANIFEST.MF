@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 16
-Implementation-Title: wl-opc
-Implementation-Version: v1.9.2
-Created-By: Maven Integration for Eclipse
-
